@@ -9,10 +9,10 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'scrpay_film'
+BOT_NAME = 'scrapy_film'
 
-SPIDER_MODULES = ['scrpay_film.spiders']
-NEWSPIDER_MODULE = 'scrpay_film.spiders'
+SPIDER_MODULES = ['scrapy_film.spiders']
+NEWSPIDER_MODULE = 'scrapy_film.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'scrpay_film.pipelines.ScrpayFilmPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'scrapy_film.pipelines.SaveToDBPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

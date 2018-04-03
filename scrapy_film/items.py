@@ -11,4 +11,7 @@ import scrapy
 class ScrpayFilmItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    film_name = scrapy.Field()
+    film_score = scrapy.Field()
+    film_download_urls = scrapy.Field()
+
